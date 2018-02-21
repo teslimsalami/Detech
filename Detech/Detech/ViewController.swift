@@ -7,16 +7,37 @@
 //
 
 import UIKit
+import MessageUI
 
 
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,MFMessageComposeViewControllerDelegate {
+    
+    @IBOutlet weak var phoneNumber: UITextField!
+    
+    func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = false
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
+    @IBAction func sendText(sender: UIButton) {              // Updated message response to emergency contacts
+        
+        
+        if (MFMessageComposeViewController.canSendText()) {
+            let controller = MFMessageComposeViewController()
+            controller.body = "Seizure. Send help!"
+            controller.recipients = [phoneNumber.text!]
+            controller.messageComposeDelegate = self
+            self.present(controller, animated: true, completion: nil)
+        }
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -24,18 +45,28 @@ class ViewController: UIViewController {
 
     override func motionEnded (_ motion: UIEventSubtype, with event: UIEvent?){
         
-    
+        // Alert emergency contacts and store database
+        
+        
         }
 }
 
+
+
+
+
+
+
+
+
+
+
 // 1. Setup connection between acceleramotor, when you have your phone on you and when it is far from you.
+
+
 // func accelerometerData(from fromDate: Date, to toDate: Date) -> CMSensorDataList?
 
-//  override func motionEnded (_ motion: UIEventSubtype, with event: UIEvent?){
 
-// newBallImage()
-
-//}
 
 
 
