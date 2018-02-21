@@ -22,7 +22,10 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    override func motionEnded (_ motion: UIEventSubtype, with event: UIEvent?){
+        
+    
+        }
 }
 
 // 1. Setup connection between acceleramotor, when you have your phone on you and when it is far from you.
