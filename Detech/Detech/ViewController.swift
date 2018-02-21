@@ -32,3 +32,7 @@ class ViewController: UIViewController {
 // 4. Use firebase to store data from user, includes length of user,
 // 5. Create log in
 
+//  override func motionEnded (_ motion: UIEventSubtype, with event: UIEvent?){
+
+// newBallImage()
+//}
