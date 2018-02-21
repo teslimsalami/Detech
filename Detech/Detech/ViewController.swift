@@ -42,6 +42,9 @@ class ViewController: UIViewController {
 // 2. Timer, data on how long seizure lasts etc...
 // 3. Send emergency alert
 // 4. Geolocation (google maps)
+
+//https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/LocationAwarenessPG/CoreLocation/CoreLocation.html
+
 // 4. Use firebase to store data from user, includes length of user,
 // 5. Create log in
 
