@@ -68,8 +68,6 @@ class ViewController: UIViewController,MFMessageComposeViewControllerDelegate {
 
 
 
-
-
 // 2. Timer, data on how long seizure lasts etc...
 // 3. Send emergency alert
 // 4. Geolocation (google maps)
