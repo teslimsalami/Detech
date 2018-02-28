@@ -48,7 +48,12 @@ class ViewController: UIViewController,MFMessageComposeViewControllerDelegate {
     override func motionEnded (_ motion: UIEventSubtype, with event: UIEvent?){
         
         // Alert emergency contacts and store database
+<<<<<<< HEAD
         // create
+=======
+        // Create stats on duration of seizure, where and when it happened
+        
+>>>>>>> 7b79b7c1131fca152aa692952c238410193d458b
         
         }
 }
@@ -57,13 +62,7 @@ class ViewController: UIViewController,MFMessageComposeViewControllerDelegate {
 
 
 
-
-
-
-
-
-
-// 1. Setup connection between acceleramotor, when you have your phone on you and when it is far from you.
+// 1. Setup connection between acceleramotor, and user. COMPLETE?
 
 
 // func accelerometerData(from fromDate: Date, to toDate: Date) -> CMSensorDataList?
