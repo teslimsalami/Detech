@@ -27,9 +27,21 @@ class ViewController: UIViewController,MFMessageComposeViewControllerDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-    @IBAction func sendText(sender: UIButton) {              // Updated message response to emergency contacts
+    //@IBAction func sendText(sender: UIButton) {              // Updated message response to emergency contacts
         
         
+//        if (MFMessageComposeViewController.canSendText()) {
+//            let controller = MFMessageComposeViewController()
+//            controller.body = "Seizure. Send help!"
+//            controller.recipients = [phoneNumber.text!]
+//            controller.messageComposeDelegate = self
+//            self.present(controller, animated: true, completion: nil)
+//        }
+        
+    }
+    @IBAction func emergencyTextPressed(_ sender: UIButton) {
+        
+        // This will send text to emergency contacts
         if (MFMessageComposeViewController.canSendText()) {
             let controller = MFMessageComposeViewController()
             controller.body = "Seizure. Send help!"
@@ -37,6 +49,7 @@ class ViewController: UIViewController,MFMessageComposeViewControllerDelegate {
             controller.messageComposeDelegate = self
             self.present(controller, animated: true, completion: nil)
         }
+        
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
