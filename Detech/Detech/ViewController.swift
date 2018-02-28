@@ -27,6 +27,8 @@ class ViewController: UIViewController,MFMessageComposeViewControllerDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
+    // sending emegency contact to user's contact
+    
     @IBAction func sendText(sender: UIButton) {              // Updated message response to emergency contacts
         
         
@@ -46,7 +48,7 @@ class ViewController: UIViewController,MFMessageComposeViewControllerDelegate {
     override func motionEnded (_ motion: UIEventSubtype, with event: UIEvent?){
         
         // Alert emergency contacts and store database
-        
+        // create
         
         }
 }
