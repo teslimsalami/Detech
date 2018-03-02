@@ -27,13 +27,12 @@ class ViewController: UIViewController,MFMessageComposeViewControllerDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-<<<<<<< HEAD
+
     //@IBAction func sendText(sender: UIButton) {              // Updated message response to emergency contacts
-=======
     // sending emegency contact to user's contact
     
     @IBAction func sendText(sender: UIButton) {              // Updated message response to emergency contacts
->>>>>>> 2b494ef81a1f35e439b216bb63664eaae409c3a7
+
         
         
 //        if (MFMessageComposeViewController.canSendText()) {
@@ -65,14 +64,14 @@ class ViewController: UIViewController,MFMessageComposeViewControllerDelegate {
     override func motionEnded (_ motion: UIEventSubtype, with event: UIEvent?){
         
         // Alert emergency contacts and store database
-<<<<<<< HEAD
-        // create
-=======
-        // Create stats on duration of seizure, where and when it happened
-        
->>>>>>> 7b79b7c1131fca152aa692952c238410193d458b
-        
-        }
+//<<<<<<< HEAD
+//        // create
+//=======
+//        // Create stats on duration of seizure, where and when it happened
+//
+//>>>>>>> 7b79b7c1131fca152aa692952c238410193d458b
+//        
+//        }
 }
 
 
@@ -80,11 +79,7 @@ class ViewController: UIViewController,MFMessageComposeViewControllerDelegate {
 
 
 // 1. Setup connection between acceleramotor, and user. COMPLETE?
-
-
 // func accelerometerData(from fromDate: Date, to toDate: Date) -> CMSensorDataList?
-
-
 
 // 2. Timer, data on how long seizure lasts etc...
 // 3. Send emergency alert
