@@ -53,6 +53,7 @@ class ViewController: UIViewController,MFMessageComposeViewControllerDelegate {
             controller.recipients = [phoneNumber.text!]
             controller.messageComposeDelegate = self
             self.present(controller, animated: true, completion: nil)
+        
         }
         
     }
@@ -75,9 +76,6 @@ class ViewController: UIViewController,MFMessageComposeViewControllerDelegate {
 }
 
 
-
-
-
 // 1. Setup connection between acceleramotor, and user. COMPLETE?
 // func accelerometerData(from fromDate: Date, to toDate: Date) -> CMSensorDataList?
 
@@ -98,3 +96,4 @@ class ViewController: UIViewController,MFMessageComposeViewControllerDelegate {
 
 // newBallImage()
 //}
+}
