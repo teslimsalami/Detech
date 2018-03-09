@@ -37,9 +37,6 @@ class ViewController: UIViewController {
         let url = URL(string: "http://")
     }
     
-    
-    
-    
     var motionManager = CMMotionManager()
     
     
@@ -63,7 +60,7 @@ class ViewController: UIViewController {
                         print ("Seizure Detected!")
                     }
                     
-                   //print (myData) To see update of 'x','y'and 'z'plane
+                   print (myData) //To see update of 'x','y'and 'z'plane
                 }
         }
         
@@ -82,7 +79,7 @@ class ViewController: UIViewController {
     }
 }
 
-// 1. Setup connection between accelerameter, and user.
+// 1. Setup connection between accelerameter, and user. Figure out when the user is having a seizure.
 // 2. Timer, data on how long seizure lasts etc...
 // 3. Send emergency alert
 // 4. Geolocation (google maps)
