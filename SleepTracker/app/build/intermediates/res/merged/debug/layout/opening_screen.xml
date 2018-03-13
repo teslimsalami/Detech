@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activityBackground"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#131313">
+
+    <Button
+        android:id="@+id/sleepButton"
+        android:text="Start Sleeping"
+        android:textColor="#E3D9FF"
+        android:textSize="30sp"
+        android:layout_width="270dp"
+        android:layout_height="60dp"
+        android:background="@drawable/buttonshape"
+        android:layout_above="@+id/plotButton"
+        android:layout_alignLeft="@+id/timePicker"
+        android:layout_alignStart="@+id/timePicker"
+        android:layout_marginBottom ="75dp"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:id="@+id/plotButton"
+        android:text="How did I sleep?"
+        android:textColor="#E3D9FF"
+        android:textSize="20sp"
+        android:layout_width="175dp"
+        android:layout_height="32dp"
+        android:background="@drawable/buttonshape"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <com.androidplot.xy.XYPlot
+        android:id="@+id/historyPlot"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        title="Movement Plot"
+        android:layout_above="@+id/timePicker"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignBottom="@+id/plotButton"
+        android:layout_marginBottom ="50dp"/>
+    <TimePicker
+        android:id="@+id/timePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:timePickerMode="spinner"
+        android:background="@drawable/timepickershape"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="72dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text=""
+        android:textSize="55sp"
+        android:textColor="#FFFFFF"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="125dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Wake up time:"
+        android:textSize="15sp"
+        android:textColor="#FFFFFF"
+        android:id="@+id/textView2"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Set alarm time:"
+        android:textSize="15sp"
+        android:textColor="#FFFFFF"
+        android:id="@+id/textView3"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp" />
+</RelativeLayout>

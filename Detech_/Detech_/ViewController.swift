@@ -15,28 +15,28 @@ class ViewController: UIViewController {
 
     
     @IBOutlet var userName: UITextField! // allows user to enter a username
-    
+
     @IBOutlet var passWord: UITextField!
-    
+
     @IBAction func loginButton(_ sender: UIButton) {
-        
+
         let username = userName.text
         let password = passWord.text
-        
+
         if (username == "" || password == "")
         {
             return
         }
-        
+
         DoLogin(username!, password!)
-        
+
     }
-    
+
     func DoLogin(_ user:String, _ psw:String){
-        
+
         let url = URL(string: "http://")
     }
-    
+
     var motionManager = CMMotionManager()
     
     override func viewDidLoad() {
@@ -62,9 +62,7 @@ class ViewController: UIViewController {
                 }
         }
         
-        
     }
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -77,12 +75,22 @@ class ViewController: UIViewController {
     }
 }
 
-// 1. Setup connection between accelerameter, and user. Figure out when the user is having a seizure.
-// 2. Timer, data on how long seizure lasts etc...
+// 1. Setup connection between accelerameter, and user. Figure out when the user is having a seizure. (Everyone)
+
+// https://developer.apple.com/documentation/accelerate/vdsp?language=objc
+
+// https://developer.apple.com/documentation/accelerate/1449755-fftwindow?language=objc
+
+// 2. Timer, data on how long seizure lasts etc... (Everyone)
+
 // 3. Send emergency alert
+
 // 4. Geolocation (google maps)
-// https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/LocationAwarenessPG/CoreLocation/CoreLocation.html
-// 4. Use firebase to store data from user, includes length of user,
-// 5. Create log in
+// https://youtu.be/UyiuX8jULF4 - Exact video (Giovanni)
+
+// 5. Use firebase to store data from user, includes length of user,
+// https://www.youtube.com/watch?v=1deyxn5jVXk - Exact Video (Teslim)
+
+// 6. Create log in - (Teslim)
 
 //  override func motionEnded (_ motion: UIEventSubtype, with event: UIEvent?){
