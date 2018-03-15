@@ -13,29 +13,6 @@ import CoreMotion // Import this in order to have access to accelerameter
 
 class ViewController: UIViewController {
 
-    
-    @IBOutlet var userName: UITextField! // allows user to enter a username
-
-    @IBOutlet var passWord: UITextField!
-
-    @IBAction func loginButton(_ sender: UIButton) {
-
-        let username = userName.text
-        let password = passWord.text
-
-        if (username == "" || password == "")
-        {
-            return
-        }
-
-        DoLogin(username!, password!)
-
-    }
-
-    func DoLogin(_ user:String, _ psw:String){
-
-        let url = URL(string: "http://")
-    }
 
     var motionManager = CMMotionManager()
     
@@ -71,7 +48,14 @@ class ViewController: UIViewController {
     
     override func viewDidDisappear(_ animated: Bool)
     {
-        self.performSegue(withIdentifier: "loginView", sender: self);
+        let isUserLoggedIn = UserDefaults.standard.bool(forKey: "isUserLoggIn");
+        
+        if(!isUserLoggedIn)
+        {
+            self.performSegue(withIdentifier: "loginView", sender: self); // Will present user with login view
+            
+        }
+        
     }
 }
 
