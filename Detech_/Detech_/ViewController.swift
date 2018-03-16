@@ -7,13 +7,34 @@
 //
 
 import UIKit
+import FirebaseDatabase
 import CoreMotion // Import this in order to have access to accelerameter
 
 
 
 class ViewController: UIViewController {
-
-
+    
+    // Allows user to enter text into field
+    @IBOutlet weak var myTextField: UITextField!
+    
+    
+    var ref:DatabaseReference?
+    
+    // Will create a database for a user
+    @IBAction func saveButton(_ sender: UIButton) {     // Allows user to save the users info to Firebase
+        
+        ref = Database.database().reference()
+        
+        if myTextField.text != ""
+        
+        {
+            ref?.child("list").childByAutoId().setValue(myTextField.text)
+        
+        }
+    
+    }
+        
+    
     var motionManager = CMMotionManager()
     
     override func viewDidLoad() {
@@ -57,6 +78,20 @@ class ViewController: UIViewController {
         }
         
     }
+    
+    
+    @IBAction func logoutButtonPressed(_ sender: UIButton) {
+        
+        UserDefaults.standard.set(false, forKey:"isUserLoggedin" );
+        UserDefaults.standard.synchronize();
+        
+        self.performSegue(withIdentifier: "loginView", sender: self);
+        
+    }
+    
+    
+    
+    
 }
 
 // 1. Setup connection between accelerameter, and user. Figure out when the user is having a seizure. (Everyone)

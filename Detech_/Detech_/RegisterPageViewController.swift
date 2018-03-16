@@ -33,7 +33,8 @@ class RegisterPageViewController: UIViewController {
         
         
         // Check for empty fields
-        if ((userEmail?.isEmpty)! || (userPassword?.isEmpty)! ){
+        if ((userEmail?.isEmpty)! || (userPassword?.isEmpty)! )
+        {
             
             // Display alert message
             displayMyAlertMessage(userMessage: "All fields are required");
@@ -73,5 +74,7 @@ class RegisterPageViewController: UIViewController {
         
         
     }
+    
+    
     
 }
