@@ -46,7 +46,7 @@ class ViewController: UIViewController {
         }
     
     }
-        
+// ******Watch youtube video
 // MARK Accelerometer
     var motionManager = CMMotionManager()
     
@@ -132,7 +132,7 @@ class ViewController: UIViewController {
 
 // https://developer.apple.com/documentation/accelerate/1449755-fftwindow?language=objc
 
-// 2. Timer, data on how long seizure lasts etc... (Everyone)
+// 2. Data on how long seizure lasts etc... (Everyone)
 
 // 3. Send emergency alert
 
