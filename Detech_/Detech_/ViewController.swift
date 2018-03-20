@@ -9,10 +9,23 @@
 import UIKit
 import FirebaseDatabase
 import CoreMotion // Import this in order to have access to accelerameter
+import Foundation
+
 
 
 
 class ViewController: UIViewController {
+    
+// MARK FFTCalculator.m
+    
+    
+// END FFTCalculator.m
+    
+    
+    
+    
+
+    
     
     // Allows user to enter text into field
     @IBOutlet weak var myTextField: UITextField!
@@ -34,7 +47,7 @@ class ViewController: UIViewController {
     
     }
         
-    
+// MARK Accelerometer
     var motionManager = CMMotionManager()
     
     override func viewDidLoad() {
@@ -71,7 +84,7 @@ class ViewController: UIViewController {
         }
         
     }
-    
+// END Accelerometer
     
     
     
@@ -85,7 +98,7 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+// MARK User loggin
     override func viewDidDisappear(_ animated: Bool)
     {
         let isUserLoggedIn = UserDefaults.standard.bool(forKey: "isUserLoggIn");
@@ -109,7 +122,7 @@ class ViewController: UIViewController {
     }
     
     
-    
+// END User loggin
     
 }
 
@@ -125,6 +138,7 @@ class ViewController: UIViewController {
 
 // 4. Geolocation (google maps)
 // https://youtu.be/UyiuX8jULF4 - Exact video (Giovanni)
+
 
 // 5. Use firebase to store data from user, includes length of user,
 // https://www.youtube.com/watch?v=1deyxn5jVXk - Exact Video (Teslim)

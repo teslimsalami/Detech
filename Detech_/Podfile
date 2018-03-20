@@ -6,7 +6,8 @@ target 'Detech_' do
   use_frameworks!
 
   # Pods for Detech_
-	
+  	pod 'GoogleMaps'
+	pod 'GooglePlaces' 	
 	pod 'Firebase/Core'
 	pod 'Firebase/Database'
 
