@@ -202,7 +202,6 @@
                                 <connections>
                                     <action selector="haveAccount:" destination="0qj-dZ-BkR" eventType="touchUpInside" id="RUE-No-vSh"/>
                                     <action selector="userHasAccountPressed:" destination="0qj-dZ-BkR" eventType="touchUpInside" id="jGO-Dd-SRe"/>
-                                    <segue destination="7Mk-pJ-zTW" kind="presentation" id="rGV-GU-DZm"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -240,7 +239,4 @@
     <resources>
         <image name="Epilepsy Ribbon" width="236" height="296"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="mXj-gm-6x4"/>
-    </inferredMetricsTieBreakers>
 </document>

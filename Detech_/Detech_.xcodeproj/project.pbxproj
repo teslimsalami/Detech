@@ -15,6 +15,7 @@
 		C60750C5204CACEF0044C7E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C60750C3204CACEF0044C7E4 /* LaunchScreen.storyboard */; };
 		C6A66F572058C7F500891223 /* RegisterPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A66F562058C7F500891223 /* RegisterPageViewController.swift */; };
 		C6A66F592058D06A00891223 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A66F582058D06A00891223 /* LoginViewController.swift */; };
+		C6B35643205C487200AEFB95 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C6B35642205C487200AEFB95 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		C60750C6204CACEF0044C7E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C6A66F562058C7F500891223 /* RegisterPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPageViewController.swift; sourceTree = "<group>"; };
 		C6A66F582058D06A00891223 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		C6B35642205C487200AEFB95 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Desktop/GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				C60750C3204CACEF0044C7E4 /* LaunchScreen.storyboard */,
 				C60750C6204CACEF0044C7E4 /* Info.plist */,
 				C6A66F562058C7F500891223 /* RegisterPageViewController.swift */,
+				C6B35642205C487200AEFB95 /* GoogleService-Info.plist */,
 				C6A66F582058D06A00891223 /* LoginViewController.swift */,
 			);
 			path = Detech_;
@@ -157,6 +160,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C60750C5204CACEF0044C7E4 /* LaunchScreen.storyboard in Resources */,
+				C6B35643205C487200AEFB95 /* GoogleService-Info.plist in Resources */,
 				C60750C2204CACEF0044C7E4 /* Assets.xcassets in Resources */,
 				C60750C0204CACEF0044C7E4 /* Main.storyboard in Resources */,
 			);

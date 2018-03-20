@@ -40,8 +40,18 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+        
+        //Uncomment the line below if you want the tap not not interfere and cancel other interactions.
+        //tap.cancelsTouchesInView = false
+        
+        view.addGestureRecognizer(tap)
     }
-
+    func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
+    }
+    
     override func viewDidAppear(_ animated: Bool)
     {
         motionManager.accelerometerUpdateInterval = 0.2
@@ -51,7 +61,7 @@ class ViewController: UIViewController {
                 if let myData = data
                 {
             
-                    if myData.acceleration.x > 5 // looks for specific change in the data recordings for the 'x' axis, find range of epileptic seizures
+                    if (myData.acceleration.x > 0.1 && myData.acceleration.y > 0.1 && myData.acceleration.z > 0.1) // looks for specific change in the data recordings for the 'x' axis, find range of epileptic seizures
                     {
                         print ("Seizure Detected!")
                     }
@@ -61,6 +71,15 @@ class ViewController: UIViewController {
         }
         
     }
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
