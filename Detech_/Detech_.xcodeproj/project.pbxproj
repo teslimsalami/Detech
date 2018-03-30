@@ -19,7 +19,7 @@
 		C6EC4E64206C5AE300D02C9D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C6EC4E63206C5AE300D02C9D /* AppDelegate.m */; };
 		C6EC4E67206C5BAE00D02C9D /* FFTCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = C6EC4E66206C5BAE00D02C9D /* FFTCalculator.m */; };
 		C6EC4E6A206C5D9900D02C9D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6EC4E69206C5D9900D02C9D /* ViewController.m */; };
-		C6EC4E71206C632900D02C9D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C6EC4E70206C632900D02C9D /* main.m */; };
+		C6EC4E71206C632900D02C9D /* main_.m in Sources */ = {isa = PBXBuildFile; fileRef = C6EC4E70206C632900D02C9D /* main_.m */; };
 		C6EC4E76206C643800D02C9D /* FFTMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6EC4E75206C643800D02C9D /* FFTMain.storyboard */; };
 		C6EC4E78206C650000D02C9D /* FFTLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6EC4E77206C650000D02C9D /* FFTLaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -45,7 +45,7 @@
 		C6EC4E66206C5BAE00D02C9D /* FFTCalculator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFTCalculator.m; sourceTree = "<group>"; };
 		C6EC4E68206C5D9900D02C9D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		C6EC4E69206C5D9900D02C9D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		C6EC4E70206C632900D02C9D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C6EC4E70206C632900D02C9D /* main_.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main_.m; sourceTree = "<group>"; };
 		C6EC4E75206C643800D02C9D /* FFTMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FFTMain.storyboard; sourceTree = "<group>"; };
 		C6EC4E77206C650000D02C9D /* FFTLaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FFTLaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -103,7 +103,7 @@
 				C6EC4E5B206C4A9B00D02C9D /* BridgingHeader.h */,
 				C6EC4E77206C650000D02C9D /* FFTLaunchScreen.storyboard */,
 				C6EC4E75206C643800D02C9D /* FFTMain.storyboard */,
-				C6EC4E70206C632900D02C9D /* main.m */,
+				C6EC4E70206C632900D02C9D /* main_.m */,
 				C6EC4E68206C5D9900D02C9D /* ViewController.h */,
 				C6EC4E69206C5D9900D02C9D /* ViewController.m */,
 				C6EC4E65206C5BAE00D02C9D /* FFTCalculator.h */,
@@ -271,7 +271,7 @@
 				C6EC4E64206C5AE300D02C9D /* AppDelegate.m in Sources */,
 				C60750BD204CACEF0044C7E4 /* ViewController.swift in Sources */,
 				C60750BB204CACEF0044C7E4 /* AppDelegate.swift in Sources */,
-				C6EC4E71206C632900D02C9D /* main.m in Sources */,
+				C6EC4E71206C632900D02C9D /* main_.m in Sources */,
 				C6A66F572058C7F500891223 /* RegisterPageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

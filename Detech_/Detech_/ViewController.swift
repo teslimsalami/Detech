@@ -17,19 +17,22 @@ import GoogleMaps
 
 class ViewController: UIViewController {
     
+    
 // MARK FFTCalculator.m
     
     
 // END FFTCalculator.m
     
-    
+// MARK Geolocation
+ 
+
     override func loadView() {
-        // Create a GMSCameraPosition that tells the map to display the
-        // coordinate -33.86,151.20 at zoom level 6.
+         // Create a GMSCameraPosition that tells the map to display the
+         // coordinate -33.86,151.20 at zoom level 6.
         let camera = GMSCameraPosition.camera(withLatitude: -33.86, longitude: 151.20, zoom: 6.0)
         let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
         view = mapView
-        
+
         // Creates a marker in the center of the map.
         let marker = GMSMarker()
         marker.position = CLLocationCoordinate2D(latitude: -33.86, longitude: 151.20)
@@ -38,6 +41,9 @@ class ViewController: UIViewController {
         marker.map = mapView
     }
     
+    
+    
+// END Geolocation
 
 
     
@@ -67,6 +73,27 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        
+        
+        
+        //** Call Objective C files to swift
+        
+        
+        var FFT:FFTCalculator  = FFTCalculator();
+        FFT.accessibilityDecrement();
+        
+        
+        //**
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         // Do any additional setup after loading the view, typically from a nib.
@@ -140,6 +167,11 @@ class ViewController: UIViewController {
     
     
 // END User loggin
+    
+    
+   
+    
+    
     
 }
 
