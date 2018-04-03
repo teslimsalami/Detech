@@ -7,45 +7,108 @@
 //
 
 import UIKit
+import FirebaseDatabase
 import CoreMotion // Import this in order to have access to accelerameter
+import Foundation
+import GoogleMaps
+
 
 
 
 class ViewController: UIViewController {
+    
+    
+// MARK FFTCalculator.m
+    
+    
+// END FFTCalculator.m
+    
+// MARK Geolocation
+ 
+
+    override func loadView() {
+         // Create a GMSCameraPosition that tells the map to display the
+         // coordinate -33.86,151.20 at zoom level 6.
+        let camera = GMSCameraPosition.camera(withLatitude: -33.86, longitude: 151.20, zoom: 6.0)
+        let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
+        view = mapView
+
+        // Creates a marker in the center of the map.
+        let marker = GMSMarker()
+        marker.position = CLLocationCoordinate2D(latitude: -33.86, longitude: 151.20)
+        marker.title = "Sydney"
+        marker.snippet = "Australia"
+        marker.map = mapView
+    }
+    
+    
+    
+// END Geolocation
+
 
     
-    @IBOutlet var userName: UITextField! // allows user to enter a username
     
-    @IBOutlet var passWord: UITextField!
+    // Allows user to enter text into field
+    @IBOutlet weak var myTextField: UITextField!
     
-    @IBAction func loginButton(_ sender: UIButton) {
+    
+    var ref:DatabaseReference?
+    
+    // Will create a database for a user
+    @IBAction func saveButton(_ sender: UIButton) {     // Allows user to save the users info to Firebase
         
-        let username = userName.text
-        let password = passWord.text
+        ref = Database.database().reference()
         
-        if (username == "" || password == "")
+        if myTextField.text != ""
+        
         {
-            return
+            ref?.child("list").childByAutoId().setValue(myTextField.text)
+        
         }
-        
-        DoLogin(username!, password!)
-        
-    }
     
-    func DoLogin(_ user:String, _ psw:String){
-        
-        let url = URL(string: "http://")
     }
-    
+// ******Watch youtube video
+// MARK Accelerometer
     var motionManager = CMMotionManager()
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        
+        
+        
+        //** Call Objective C files to swift
+        
+        
+        var FFT:FFTCalculator  = FFTCalculator();
+        FFT.accessibilityDecrement();
+        
+        
+        //**
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         // Do any additional setup after loading the view, typically from a nib.
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+        
+        //Uncomment the line below if you want the tap not not interfere and cancel other interactions.
+        //tap.cancelsTouchesInView = false
+        
+        view.addGestureRecognizer(tap)
     }
-
+    func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
+    }
+    
     override func viewDidAppear(_ animated: Bool)
     {
         motionManager.accelerometerUpdateInterval = 0.2
@@ -55,7 +118,7 @@ class ViewController: UIViewController {
                 if let myData = data
                 {
             
-                    if myData.acceleration.x > 5 // looks for specific change in the data recordings for the 'x' axis, find range of epileptic seizures
+                    if (myData.acceleration.x > 0.1 && myData.acceleration.y > 0.1 && myData.acceleration.z > 0.1) // looks for specific change in the data recordings for the 'x' axis, find range of epileptic seizures
                     {
                         print ("Seizure Detected!")
                     }
@@ -64,27 +127,70 @@ class ViewController: UIViewController {
                 }
         }
         
-        
     }
+// END Accelerometer
+    
+    
+    
+    
+    
+    
+    
     
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+// MARK User loggin
     override func viewDidDisappear(_ animated: Bool)
     {
-        self.performSegue(withIdentifier: "loginView", sender: self);
+        let isUserLoggedIn = UserDefaults.standard.bool(forKey: "isUserLoggIn");
+        
+        if(!isUserLoggedIn)
+        {
+            self.performSegue(withIdentifier: "loginView", sender: self); // Will present user with login view
+            
+        }
+        
     }
+    
+    
+    @IBAction func logoutButtonPressed(_ sender: UIButton) {
+        
+        UserDefaults.standard.set(false, forKey:"isUserLoggedin" );
+        UserDefaults.standard.synchronize();
+        
+        self.performSegue(withIdentifier: "loginView", sender: self);
+        
+    }
+    
+    
+// END User loggin
+    
+    
+   
+    
+    
+    
 }
 
-// 1. Setup connection between accelerameter, and user. Figure out when the user is having a seizure.
-// 2. Timer, data on how long seizure lasts etc...
-// 3. Send emergency alert
-// 4. Geolocation (google maps)
-// https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/LocationAwarenessPG/CoreLocation/CoreLocation.html
-// 4. Use firebase to store data from user, includes length of user,
-// 5. Create log in
+// 1. Setup connection between accelerameter, and user. Figure out when the user is having a seizure. (Everyone)
 
-//  override func motionEnded (_ motion: UIEventSubtype, with event: UIEvent?){
+// https://developer.apple.com/documentation/accelerate/vdsp?language=objc
+
+// https://developer.apple.com/documentation/accelerate/1449755-fftwindow?language=objc
+
+// 2. Data on how long seizure lasts etc... (Everyone)
+
+// 3. Send emergency alert
+
+// 4. Geolocation (google maps)
+// https://youtu.be/UyiuX8jULF4 - Exact video (Giovanni)
+
+
+// 5. Use firebase to store data from user, includes length of user,
+// https://www.youtube.com/watch?v=1deyxn5jVXk - Exact Video (Teslim)
+
+// 6. Create log in - (Teslim)
+
