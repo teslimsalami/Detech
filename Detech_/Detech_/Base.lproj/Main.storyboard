@@ -38,34 +38,18 @@
                                     <action selector="logoutButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uAc-EU-R4h"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Detech User Manual 29 pt @ 3x" translatesAutoresizingMaskIntoConstraints="NO" id="DvN-F7-BH7">
-                                <rect key="frame" x="67" y="81" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2SN-un-BX7">
                                 <rect key="frame" x="103" y="637" width="152" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Emergency Contact"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Wi-pQ-MmU">
-                                <rect key="frame" x="305" y="371" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Save"/>
                                 <connections>
-                                    <action selector="saveButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ppb-2J-Tms"/>
+                                    <action selector="createEmergencyContact:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qhr-Xl-Joz"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Mnd-6R-UhJ">
                                 <rect key="frame" x="0.0" y="584" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </stackView>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bpY-84-u4G">
-                                <rect key="frame" x="87" y="532" width="191" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tb7-gd-WIU">
                                 <rect key="frame" x="16" y="637" width="75" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -77,6 +61,7 @@
                                 <state key="normal" title="User Location"/>
                                 <connections>
                                     <action selector="userLocationPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pJn-K8-Iat"/>
+                                    <action selector="userLocationTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="w1c-FP-f1O"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M78-a3-if4">
@@ -84,19 +69,16 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Help Now!"/>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Detech User Manual 29 pt @ 3x" translatesAutoresizingMaskIntoConstraints="NO" id="DvN-F7-BH7">
+                                <rect key="frame" x="76" y="72" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="uF8-3J-FZD"/>
                     <nil key="simulatedTopBarMetrics"/>
-                    <connections>
-                        <outlet property="loginButton" destination="Cv1-Np-mxH" id="8cx-1m-TUN"/>
-                        <outlet property="myTextDield" destination="bpY-84-u4G" id="bdj-gn-t9b"/>
-                        <outlet property="myTextField" destination="bpY-84-u4G" id="zsZ-dt-G0m"/>
-                        <outlet property="passWord" destination="Isf-cv-oQK" id="YuZ-jf-NrO"/>
-                        <outlet property="userName" destination="V9D-57-114" id="gBV-RD-mPR"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -135,7 +117,6 @@
                                     <color key="titleColor" red="0.24313725490196078" green="0.38039215686274508" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="loginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JpA-wS-Kdi"/>
                                     <action selector="loginButtonPressed:" destination="7Mk-pJ-zTW" eventType="touchUpInside" id="cG2-28-I65"/>
                                     <segue destination="BYZ-38-t0r" kind="presentation" identifier="entryView" id="2Wp-N3-1Xp"/>
                                 </connections>

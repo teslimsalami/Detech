@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import CoreLocation
+import MessageUI
 import FirebaseDatabase
 import CoreMotion // Import this in order to have access to accelerameter
 import Foundation
-import GoogleMaps
+//import GoogleMaps
 
 
 
@@ -34,21 +36,156 @@ class ViewController: UIViewController {
     
 // MARK Geolocation
  
-
-    override func loadView() {
-         // Create a GMSCameraPosition that tells the map to display the
-         // coordinate -33.86,151.20 at zoom level 6.
-        let camera = GMSCameraPosition.camera(withLatitude: -33.86, longitude: 151.20, zoom: 6.0)
-        let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
-        view = mapView
-
-        // Creates a marker in the center of the map.
-        let marker = GMSMarker()
-        marker.position = CLLocationCoordinate2D(latitude: -33.86, longitude: 151.20)
-        marker.title = "Sydney"
-        marker.snippet = "Australia"
-        marker.map = mapView
+    @IBAction func userLocationTouched(_ sender: UIButton) {
+        
+        class ViewController: UIViewController, CLLocationManagerDelegate {
+            
+            // Used to start getting the users location
+            let locationManager = CLLocationManager()
+            
+            override func viewDidLoad() {
+                super.viewDidLoad()
+                
+                
+                // For use when the app is open & in the background
+                locationManager.requestAlwaysAuthorization()
+                
+                // For use when the app is open
+                //locationManager.requestWhenInUseAuthorization()
+                
+                // If location services is enabled get the users location
+                if CLLocationManager.locationServicesEnabled() {
+                    locationManager.delegate = self
+                    locationManager.desiredAccuracy = kCLLocationAccuracyBest // You can change the locaiton accuary here.
+                    locationManager.startUpdatingLocation()
+                }
+            }
+            
+            // Print out the location to the console
+            func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+                if let location = locations.first {
+                    print(location.coordinate)
+                }
+            }
+            
+            // If we have been deined access give the user the option to change it
+            func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+                if(status == CLAuthorizationStatus.denied) {
+                    showLocationDisabledPopUp()
+                }
+            }
+            
+            // Show the popup to the user if we have been deined access
+            func showLocationDisabledPopUp() {
+                let alertController = UIAlertController(title: "Background Location Access Disabled",
+                                                        message: "In order to deliver pizza we need your location",
+                                                        preferredStyle: .alert)
+                
+                let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+                alertController.addAction(cancelAction)
+                
+                let openAction = UIAlertAction(title: "Open Settings", style: .default) { (action) in
+                    if let url = URL(string: UIApplicationOpenSettingsURLString) {
+                        UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                    }
+                }
+                alertController.addAction(openAction)
+                
+                self.present(alertController, animated: true, completion: nil)
+            }
+            
+        }
+        
+        
+        
+        
+        
+        
     }
+    
+//    class ViewController: UIViewController, CLLocationManagerDelegate {
+//
+//        // Used to start getting the users location
+//        let locationManager = CLLocationManager()
+//
+//        override func viewDidLoad() {
+//            super.viewDidLoad()
+//
+//
+//            // For use when the app is open & in the background
+//            locationManager.requestAlwaysAuthorization()
+//
+//            // For use when the app is open
+//            //locationManager.requestWhenInUseAuthorization()
+//
+//            // If location services is enabled get the users location
+//            if CLLocationManager.locationServicesEnabled() {
+//                locationManager.delegate = self
+//                locationManager.desiredAccuracy = kCLLocationAccuracyBest // You can change the locaiton accuary here.
+//                locationManager.startUpdatingLocation()
+//            }
+//        }
+//
+//        // Print out the location to the console
+//        func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+//            if let location = locations.first {
+//                print(location.coordinate)
+//            }
+//        }
+//
+//        // If we have been deined access give the user the option to change it
+//        func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+//            if(status == CLAuthorizationStatus.denied) {
+//                showLocationDisabledPopUp()
+//            }
+//        }
+//
+//        // Show the popup to the user if we have been deined access
+//        func showLocationDisabledPopUp() {
+//            let alertController = UIAlertController(title: "Background Location Access Disabled",
+//                                                    message: "In order to deliver pizza we need your location",
+//                                                    preferredStyle: .alert)
+//
+//            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+//            alertController.addAction(cancelAction)
+//
+//            let openAction = UIAlertAction(title: "Open Settings", style: .default) { (action) in
+//                if let url = URL(string: UIApplicationOpenSettingsURLString) {
+//                    UIApplication.shared.open(url, options: [:], completionHandler: nil)
+//                }
+//            }
+//            alertController.addAction(openAction)
+//
+//            self.present(alertController, animated: true, completion: nil)
+//        }
+//
+//    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+//    override func loadView() {
+//         // Create a GMSCameraPosition that tells the map to display the
+//         // coordinate -33.86,151.20 at zoom level 6.
+//        let camera = GMSCameraPosition.camera(withLatitude: -33.86, longitude: 151.20, zoom: 6.0)
+//        let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
+//        view = mapView
+//
+//        // Creates a marker in the center of the map.
+//        let marker = GMSMarker()
+//        marker.position = CLLocationCoordinate2D(latitude: -33.86, longitude: 151.20)
+//        marker.title = "Sydney"
+//        marker.snippet = "Australia"
+//        marker.map = mapView
+//    }
     
     
     
@@ -57,25 +194,25 @@ class ViewController: UIViewController {
 
     
     
-    // Allows user to enter text into field
-    @IBOutlet weak var myTextField: UITextField!
-    
-    
-    var ref:DatabaseReference?
-    
-    // Will create a database for a user
-    @IBAction func saveButton(_ sender: UIButton) {     // Allows user to save the users info to Firebase
-        
-        ref = Database.database().reference()
-        
-        if myTextField.text != ""
-        
-        {
-            ref?.child("list").childByAutoId().setValue(myTextField.text)
-        
-        }
-    
-    }
+//    // Allows user to enter text into field
+//    @IBOutlet weak var myTextField: UITextField!
+//
+//
+//    var ref:DatabaseReference?
+//
+//    // Will create a database for a user
+//    @IBAction func saveButton(_ sender: UIButton) {     // Allows user to save the users info to Firebase
+//
+//        ref = Database.database().reference()
+//
+//        if myTextField.text != ""
+//
+//        {
+//            ref?.child("list").childByAutoId().setValue(myTextField.text)
+//
+//        }
+//
+//    }
 // ******Watch youtube video
 // MARK Accelerometer
     var motionManager = CMMotionManager()
@@ -90,9 +227,9 @@ class ViewController: UIViewController {
         //** Call Objective C files to swift
         
         
-        var FFT:FFTCalculator  = FFTCalculator();
-        FFT.accessibilityDecrement();
-        
+//        var FFT:FFTCalculator  = FFTCalculator();
+//        FFT.accessibilityDecrement();
+//
         
         //**
         
@@ -131,6 +268,11 @@ class ViewController: UIViewController {
         }
         
     }
+    
+    
+    
+    
+    
 // END Accelerometer
     
     
@@ -158,6 +300,39 @@ class ViewController: UIViewController {
         
     }
     
+    @IBAction func createEmergencyContact(_ sender: UIButton) {
+        
+    
+        
+        class ViewController: UIViewController, MFMessageComposeViewControllerDelegate {
+            
+            @IBOutlet weak var phoneNumber: UITextField!
+            
+            override func viewDidLoad() {
+                super.viewDidLoad()
+            }
+            
+            @IBAction func sendText(sender: UIButton) {
+                if (MFMessageComposeViewController.canSendText()) {
+                    let controller = MFMessageComposeViewController()
+                    controller.body = "Message Body"
+                    controller.recipients = [phoneNumber.text!]
+                    controller.messageComposeDelegate = self
+                    self.present(controller, animated: true, completion: nil)
+                }
+            }
+            
+            func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
+                //... handle sms screen actions
+                self.dismiss(animated: true, completion: nil)
+            }
+            
+            override func viewWillDisappear(_ animated: Bool) {
+                self.navigationController?.isNavigationBarHidden = false
+            }
+        }
+        
+    }
     
     @IBAction func logoutButtonPressed(_ sender: UIButton) {
         
