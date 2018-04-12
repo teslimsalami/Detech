@@ -14,11 +14,20 @@ import GoogleMaps
 
 
 
-
 class ViewController: UIViewController {
     
     
 // MARK FFTCalculator.m
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
 // END FFTCalculator.m
@@ -87,13 +96,7 @@ class ViewController: UIViewController {
         
         //**
         
-        
-        
-        
-        
-        
-        
-        
+
         
         
         // Do any additional setup after loading the view, typically from a nib.
