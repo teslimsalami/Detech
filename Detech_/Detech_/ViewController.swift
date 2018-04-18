@@ -300,48 +300,39 @@ class ViewController: UIViewController {
         
     }
     
-    @IBAction func createEmergencyContact(_ sender: UIButton) {
-        
-    
-        
-        class ViewController: UIViewController, MFMessageComposeViewControllerDelegate {
-            
-            @IBOutlet weak var phoneNumber: UITextField!
-            
-            override func viewDidLoad() {
-                super.viewDidLoad()
-            }
-            
-            @IBAction func sendText(sender: UIButton) {
-                if (MFMessageComposeViewController.canSendText()) {
-                    let controller = MFMessageComposeViewController()
-                    controller.body = "Message Body"
-                    controller.recipients = [phoneNumber.text!]
-                    controller.messageComposeDelegate = self
-                    self.present(controller, animated: true, completion: nil)
-                }
-            }
-            
-            func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
-                //... handle sms screen actions
-                self.dismiss(animated: true, completion: nil)
-            }
-            
-            override func viewWillDisappear(_ animated: Bool) {
-                self.navigationController?.isNavigationBarHidden = false
-            }
-        }
-        
-    }
-    
-    @IBAction func logoutButtonPressed(_ sender: UIButton) {
-        
-        UserDefaults.standard.set(false, forKey:"isUserLoggedin" );
-        UserDefaults.standard.synchronize();
-        
-        self.performSegue(withIdentifier: "loginView", sender: self);
-        
-    }
+//    @IBAction func createEmergencyContact(_ sender: UIButton) {
+//
+//
+//
+//        class ViewController: UIViewController, MFMessageComposeViewControllerDelegate {
+//
+//            @IBOutlet weak var phoneNumber: UITextField!
+//
+//            override func viewDidLoad() {
+//                super.viewDidLoad()
+//            }
+//
+//            @IBAction func sendText(sender: UIButton) {
+//                if (MFMessageComposeViewController.canSendText()) {
+//                    let controller = MFMessageComposeViewController()
+//                    controller.body = "Message Body"
+//                    controller.recipients = [phoneNumber.text!]
+//                    controller.messageComposeDelegate = self
+//                    self.present(controller, animated: true, completion: nil)
+//                }
+//            }
+//
+//            func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
+//                //... handle sms screen actions
+//                self.dismiss(animated: true, completion: nil)
+//            }
+//
+//            override func viewWillDisappear(_ animated: Bool) {
+//                self.navigationController?.isNavigationBarHidden = false
+//            }
+//        }
+//
+//    }
     
     
 // END User loggin

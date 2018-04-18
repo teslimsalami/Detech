@@ -13,7 +13,10 @@
 		C60750C0204CACEF0044C7E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C60750BE204CACEF0044C7E4 /* Main.storyboard */; };
 		C60750C2204CACEF0044C7E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C60750C1204CACEF0044C7E4 /* Assets.xcassets */; };
 		C60750C5204CACEF0044C7E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C60750C3204CACEF0044C7E4 /* LaunchScreen.storyboard */; };
-		C6103EDE207FE3C1003F2778 /* userLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6103EDD207FE3C1003F2778 /* userLocationViewController.swift */; };
+		C6626EC22086632100B93068 /* ContactStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6626EC12086632100B93068 /* ContactStruct.swift */; };
+		C69A900D208647340065745B /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69A900C208647340065745B /* NewViewController.swift */; };
+		C69A901320864C1F0065745B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69A901220864C1F0065745B /* MapViewController.swift */; };
+		C69A9015208657920065745B /* EmergencyContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69A9014208657920065745B /* EmergencyContactViewController.swift */; };
 		C6A66F572058C7F500891223 /* RegisterPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A66F562058C7F500891223 /* RegisterPageViewController.swift */; };
 		C6A66F592058D06A00891223 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A66F582058D06A00891223 /* LoginViewController.swift */; };
 		C6B35643205C487200AEFB95 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C6B35642205C487200AEFB95 /* GoogleService-Info.plist */; };
@@ -36,7 +39,10 @@
 		C60750C1204CACEF0044C7E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C60750C4204CACEF0044C7E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C60750C6204CACEF0044C7E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C6103EDD207FE3C1003F2778 /* userLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userLocationViewController.swift; sourceTree = "<group>"; };
+		C6626EC12086632100B93068 /* ContactStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactStruct.swift; sourceTree = "<group>"; };
+		C69A900C208647340065745B /* NewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
+		C69A901220864C1F0065745B /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		C69A9014208657920065745B /* EmergencyContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyContactViewController.swift; sourceTree = "<group>"; };
 		C6A66F562058C7F500891223 /* RegisterPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPageViewController.swift; sourceTree = "<group>"; };
 		C6A66F582058D06A00891223 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C6B35642205C487200AEFB95 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Desktop/GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -94,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				C60750BA204CACEF0044C7E4 /* AppDelegate.swift */,
+				C69A900C208647340065745B /* NewViewController.swift */,
 				C60750BC204CACEF0044C7E4 /* ViewController.swift */,
 				C60750BE204CACEF0044C7E4 /* Main.storyboard */,
 				C60750C1204CACEF0044C7E4 /* Assets.xcassets */,
@@ -112,7 +119,9 @@
 				C6EC4E66206C5BAE00D02C9D /* FFTCalculator.m */,
 				C6EC4E62206C5AE300D02C9D /* AppDelegate.h */,
 				C6EC4E63206C5AE300D02C9D /* AppDelegate.m */,
-				C6103EDD207FE3C1003F2778 /* userLocationViewController.swift */,
+				C69A901220864C1F0065745B /* MapViewController.swift */,
+				C69A9014208657920065745B /* EmergencyContactViewController.swift */,
+				C6626EC12086632100B93068 /* ContactStruct.swift */,
 			);
 			path = Detech_;
 			sourceTree = "<group>";
@@ -271,12 +280,15 @@
 				C6EC4E6A206C5D9900D02C9D /* ViewController.m in Sources */,
 				C6EC4E67206C5BAE00D02C9D /* FFTCalculator.m in Sources */,
 				C6A66F592058D06A00891223 /* LoginViewController.swift in Sources */,
+				C69A901320864C1F0065745B /* MapViewController.swift in Sources */,
 				C6EC4E64206C5AE300D02C9D /* AppDelegate.m in Sources */,
+				C69A9015208657920065745B /* EmergencyContactViewController.swift in Sources */,
 				C60750BD204CACEF0044C7E4 /* ViewController.swift in Sources */,
+				C6626EC22086632100B93068 /* ContactStruct.swift in Sources */,
 				C60750BB204CACEF0044C7E4 /* AppDelegate.swift in Sources */,
 				C6EC4E71206C632900D02C9D /* main_.m in Sources */,
+				C69A900D208647340065745B /* NewViewController.swift in Sources */,
 				C6A66F572058C7F500891223 /* RegisterPageViewController.swift in Sources */,
-				C6103EDE207FE3C1003F2778 /* userLocationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
