@@ -58,8 +58,10 @@ class EmergencyContactViewController: UIViewController, UITableViewDelegate, UIT
             
             let name = contact.givenName
             let familyName = contact.familyName
-            let number = contact.phoneNumbers.first?.value.stringValue
-            
+            var number = contact.phoneNumbers.first?.value.stringValue
+            if(number == nil) {
+                number = "911";//emergency 
+            }
             let contactToAppend = ContactStruct (givenName: name, familyName: familyName, number: number!)
             
             self.contacts.append(contactToAppend)
