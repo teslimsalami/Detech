@@ -13,6 +13,7 @@
 		C60750C0204CACEF0044C7E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C60750BE204CACEF0044C7E4 /* Main.storyboard */; };
 		C60750C2204CACEF0044C7E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C60750C1204CACEF0044C7E4 /* Assets.xcassets */; };
 		C60750C5204CACEF0044C7E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C60750C3204CACEF0044C7E4 /* LaunchScreen.storyboard */; };
+		C62AE9C0208BA137003B4D04 /* eMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62AE9BF208BA137003B4D04 /* eMessageViewController.swift */; };
 		C6626EC22086632100B93068 /* ContactStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6626EC12086632100B93068 /* ContactStruct.swift */; };
 		C68F36FA2087C3D60023023E /* AccelerDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68F36F92087C3D60023023E /* AccelerDataViewController.swift */; };
 		C69A900D208647340065745B /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69A900C208647340065745B /* NewViewController.swift */; };
@@ -40,6 +41,7 @@
 		C60750C1204CACEF0044C7E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C60750C4204CACEF0044C7E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C60750C6204CACEF0044C7E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C62AE9BF208BA137003B4D04 /* eMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eMessageViewController.swift; sourceTree = "<group>"; };
 		C6626EC12086632100B93068 /* ContactStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactStruct.swift; sourceTree = "<group>"; };
 		C68F36F92087C3D60023023E /* AccelerDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccelerDataViewController.swift; sourceTree = "<group>"; };
 		C69A900C208647340065745B /* NewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
@@ -85,7 +87,6 @@
 			children = (
 				C60750B9204CACEF0044C7E4 /* Detech_ */,
 				C60750B8204CACEF0044C7E4 /* Products */,
-				C69A9014208657920065745B /* EmergencyContactViewController.swift */,
 				EDCE6F7A523F12BD56954758 /* Pods */,
 				C137FBB60C7E5836B00B805E /* Frameworks */,
 			);
@@ -125,6 +126,8 @@
 				C69A901220864C1F0065745B /* MapViewController.swift */,
 				C6626EC12086632100B93068 /* ContactStruct.swift */,
 				C68F36F92087C3D60023023E /* AccelerDataViewController.swift */,
+				C62AE9BF208BA137003B4D04 /* eMessageViewController.swift */,
+				C69A9014208657920065745B /* EmergencyContactViewController.swift */,
 			);
 			path = Detech_;
 			sourceTree = "<group>";
@@ -284,6 +287,7 @@
 				C6EC4E67206C5BAE00D02C9D /* FFTCalculator.m in Sources */,
 				C6A66F592058D06A00891223 /* LoginViewController.swift in Sources */,
 				C69A901320864C1F0065745B /* MapViewController.swift in Sources */,
+				C62AE9C0208BA137003B4D04 /* eMessageViewController.swift in Sources */,
 				C6EC4E64206C5AE300D02C9D /* AppDelegate.m in Sources */,
 				C69A9015208657920065745B /* EmergencyContactViewController.swift in Sources */,
 				C60750BD204CACEF0044C7E4 /* ViewController.swift in Sources */,

@@ -113,6 +113,7 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="DcR-Nf-am3" id="h0h-Nn-D6W"/>
+                        <segue destination="uon-99-o5o" kind="show" identifier="sendUserData" id="RH1-KD-1sA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2EO-bO-Bxp" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -122,7 +123,7 @@
         <!--Acceler Data View Controller-->
         <scene sceneID="LQu-gn-jTt">
             <objects>
-                <viewController id="uon-99-o5o" customClass="AccelerDataViewController" customModule="Detech_" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DataLog" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uon-99-o5o" customClass="AccelerDataViewController" customModule="Detech_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2pM-35-ub0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -134,17 +135,41 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Emergency Contact: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C4t-ax-CRp">
+                                <rect key="frame" x="0.0" y="453" width="375" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="DDT-p9-oUQ"/>
                     </view>
                     <connections>
                         <outlet property="dataText" destination="Qb5-7N-Ui1" id="Cjt-7A-mjO"/>
+                        <outlet property="emergencyContactInfo" destination="C4t-ax-CRp" id="qk8-mM-JJI"/>
+                        <segue destination="sjg-Cw-MaI" kind="show" identifier="sendText" id="RXW-ur-Czy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ris-7f-dr8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2292" y="877.51124437781118"/>
+        </scene>
+        <!--Message View Controller-->
+        <scene sceneID="ul1-Lo-03O">
+            <objects>
+                <viewController storyboardIdentifier="eMessage" useStoryboardIdentifierAsRestorationIdentifier="YES" id="sjg-Cw-MaI" customClass="eMessageViewController" customModule="Detech_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cEb-wc-D4D">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="70z-My-5Pf"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j01-uS-mVi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3327" y="878"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="r0I-ZF-u5M">
@@ -352,6 +377,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Jgd-kT-vgP"/>
-        <segue reference="2Wp-N3-1Xp"/>
+        <segue reference="RH1-KD-1sA"/>
+        <segue reference="E78-QK-pqv"/>
     </inferredMetricsTieBreakers>
 </document>

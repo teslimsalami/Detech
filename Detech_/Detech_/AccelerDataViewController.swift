@@ -14,39 +14,23 @@ class AccelerDataViewController: UIViewController {
  
     
     @IBOutlet weak var dataText: UILabel!
+    @IBOutlet weak var emergencyContactInfo: UILabel!
     
     var motionManager = CMMotionManager()
-    //var emergencyContact;
+    
+    
+    var emergencyContact = UILabel();
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        emergencyContactInfo = emergencyContact
         //**
-        
-        
-        
-        
-        // Do any additional setup after loading the view, typically from a nib.
-//        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
-//
-        //Uncomment the line below if you want the tap not not interfere and cancel other interactions.
-        //tap.cancelsTouchesInView = false
-        
-     //   view.addGestureRecognizer(tap)
 
         // Do any additional setup after loading the view.
     }
     
-    
-    
-//    func dismissKeyboard() {
-//        //Causes the view (or one of its embedded text fields) to resign the first responder status.
-//        view.endEditing(true)
-//    }
-    
-
     
     
     override func viewDidAppear(_ animated: Bool)
@@ -58,24 +42,24 @@ class AccelerDataViewController: UIViewController {
             if let myData = data
             {
                 
-                if (myData.acceleration.x > 0.1 && myData.acceleration.y > 0.1 && myData.acceleration.z > 0.1) // looks for specific change in the data recordings for the 'x' axis, find range of epileptic seizures
-//                if(emergencyContact == nil) {
-//                {
+                if (myData.acceleration.x > 0 && myData.acceleration.y > 0 && myData.acceleration.z > 0) {// looks for specific change in the data recordings for the 'x,y,z' axis, find range of epileptic seizures
+                    //if(emergencyContact == nil) {
+                    do {
                     print ("Seizure Detected!")
                     self.dataText.text = "Seizure Detected!";
-                    
+
                     //textView.text = "Seizure Detected";
                 }
                // dataLogText.text = String(myData);
              
                 print (myData) //To see update of 'x','y'and 'z'plane
             }
-            //}
+              }
             //else{
                 //send text to emergency cntact
                 
-                //performSegue(withIdentifier: newSegue, sender: <#T##Any?#>)
-            //}
+                //performSegue(withIdentifier: "sendText", sender: self)
+            }
             
             
             
@@ -84,4 +68,3 @@ class AccelerDataViewController: UIViewController {
     }
     
 
-//}

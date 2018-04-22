@@ -8,7 +8,6 @@
 
 import UIKit
 import CoreLocation
-import MessageUI
 import FirebaseDatabase
 import CoreMotion // Import this in order to have access to accelerameter
 import Foundation
@@ -109,66 +108,6 @@ class ViewController: UIViewController {
 
     
     
-//    // MARK Accelerometer
-//    var motionManager = CMMotionManager()
-//
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//
-//
-//        //**
-//
-//
-//
-//
-//        // Do any additional setup after loading the view, typically from a nib.
-//        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
-//
-//        //Uncomment the line below if you want the tap not not interfere and cancel other interactions.
-//        //tap.cancelsTouchesInView = false
-//
-//        view.addGestureRecognizer(tap)
-//    }
-//    func dismissKeyboard() {
-//        //Causes the view (or one of its embedded text fields) to resign the first responder status.
-//        view.endEditing(true)
-//    }
-//
-//    override func viewDidAppear(_ animated: Bool)
-//    {
-//        motionManager.accelerometerUpdateInterval = 0.2
-//
-//        motionManager.startAccelerometerUpdates(to: OperationQueue.current!){(data,error) in
-//
-//                if let myData = data
-//                {
-//
-//                    if (myData.acceleration.x > 0.1 && myData.acceleration.y > 0.1 && myData.acceleration.z > 0.1) // looks for specific change in the data recordings for the 'x' axis, find range of epileptic seizures
-//                    {
-//                        print ("Seizure Detected!")
-//                        //textView.text = "Seizure Detected";
-//                    }
-//
-//                   print (myData) //To see update of 'x','y'and 'z'plane
-//                }
-//        }
-//
-//    }
-    
-    
-    
-    
-    
-// END Accelerometer
-    
-    
-    
-    
-    
-    
-    
-    
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -186,39 +125,7 @@ class ViewController: UIViewController {
         
     }
     
-//    @IBAction func createEmergencyContact(_ sender: UIButton) {
-//
-//
-//
-//        class ViewController: UIViewController, MFMessageComposeViewControllerDelegate {
-//
-//            @IBOutlet weak var phoneNumber: UITextField!
-//
-//            override func viewDidLoad() {
-//                super.viewDidLoad()
-//            }
-//
-//            @IBAction func sendText(sender: UIButton) {
-//                if (MFMessageComposeViewController.canSendText()) {
-//                    let controller = MFMessageComposeViewController()
-//                    controller.body = "Message Body"
-//                    controller.recipients = [phoneNumber.text!]
-//                    controller.messageComposeDelegate = self
-//                    self.present(controller, animated: true, completion: nil)
-//                }
-//            }
-//
-//            func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
-//                //... handle sms screen actions
-//                self.dismiss(animated: true, completion: nil)
-//            }
-//
-//            override func viewWillDisappear(_ animated: Bool) {
-//                self.navigationController?.isNavigationBarHidden = false
-//            }
-//        }
-//
-//    }
+
     
     
 // END User loggin
