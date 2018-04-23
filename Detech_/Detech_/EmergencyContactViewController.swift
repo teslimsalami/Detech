@@ -50,25 +50,6 @@ class EmergencyContactViewController: UIViewController, UITableViewDelegate, UIT
         
     }
     
-    // Allows me to physically select user and then perform action from there *******
-   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    
-    
-    
-     
-        performSegue(withIdentifier: "sendUserData", sender: self)
-    }
-    
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        var AccelerData = segue.destination as! AccelerDataViewController
-        AccelerData.emergencyContact = tableView
-    }
-    
-     
-    
-    
-    
     func fetchContacts(){
         
         let key = [CNContactGivenNameKey, CNContactFamilyNameKey, CNContactPhoneNumbersKey] as [CNKeyDescriptor]
@@ -77,10 +58,8 @@ class EmergencyContactViewController: UIViewController, UITableViewDelegate, UIT
             
             let name = contact.givenName
             let familyName = contact.familyName
-            var number = contact.phoneNumbers.first?.value.stringValue
-            if(number == nil) {
-                number = "911";//emergency 
-            }
+            let number = contact.phoneNumbers.first?.value.stringValue
+            
             let contactToAppend = ContactStruct (givenName: name, familyName: familyName, number: number!)
             
             self.contacts.append(contactToAppend)
@@ -89,9 +68,5 @@ class EmergencyContactViewController: UIViewController, UITableViewDelegate, UIT
         tableView.reloadData()
         
     }
-    
-    
-    
-    
 
 }
