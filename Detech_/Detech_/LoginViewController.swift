@@ -8,15 +8,36 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var userEmailTextField: UITextField!
     @IBOutlet weak var userPasswordTextField: UITextField!
     
     override func viewDidLoad() {
+        
+        userEmailTextField.delegate = self
+        userPasswordTextField.delegate = self
+        
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        if textField == userEmailTextField {
+            
+            userPasswordTextField.becomeFirstResponder()
+        }else if textField == userPasswordTextField{
+            textField.resignFirstResponder()
+        }
+        return true
     }
 
     override func didReceiveMemoryWarning() {
@@ -47,14 +68,6 @@ class LoginViewController: UIViewController {
         }
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
 
 }
