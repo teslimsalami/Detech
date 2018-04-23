@@ -89,13 +89,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DcR-Nf-am3">
-                                <rect key="frame" x="0.0" y="20" width="375" height="607"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DcR-Nf-am3">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2O1-TS-Hyo">
-                                <rect key="frame" x="164" y="635" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2O1-TS-Hyo">
+                                <rect key="frame" x="164" y="667" width="46" height="30"/>
                                 <state key="normal" title="Return"/>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" id="E78-QK-pqv"/>
@@ -104,6 +103,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="2O1-TS-Hyo" firstAttribute="top" secondItem="DcR-Nf-am3" secondAttribute="bottom" id="5hk-cj-gCi"/>
                             <constraint firstItem="DcR-Nf-am3" firstAttribute="leading" secondItem="nZz-0r-54E" secondAttribute="leading" id="ABR-QP-wkt"/>
                             <constraint firstItem="nZz-0r-54E" firstAttribute="bottom" secondItem="DcR-Nf-am3" secondAttribute="bottom" id="FvD-yV-T2W"/>
                             <constraint firstItem="nZz-0r-54E" firstAttribute="trailing" secondItem="DcR-Nf-am3" secondAttribute="trailing" id="XPO-jw-D2H"/>
@@ -135,20 +135,18 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Emergency Contact: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C4t-ax-CRp">
-                                <rect key="frame" x="0.0" y="453" width="375" height="60"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="clZ-Ct-0j9">
+                                <rect key="frame" x="16" y="519" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="DDT-p9-oUQ"/>
                     </view>
                     <connections>
                         <outlet property="dataText" destination="Qb5-7N-Ui1" id="Cjt-7A-mjO"/>
-                        <outlet property="emergencyContactInfo" destination="C4t-ax-CRp" id="qk8-mM-JJI"/>
+                        <outlet property="emergencyContactInfo_" destination="clZ-Ct-0j9" id="f0X-9d-KRP"/>
                         <segue destination="sjg-Cw-MaI" kind="show" identifier="sendText" id="RXW-ur-Czy"/>
                     </connections>
                 </viewController>
@@ -163,13 +161,23 @@
                     <view key="view" contentMode="scaleToFill" id="cEb-wc-D4D">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3dD-cz-uKb">
+                                <rect key="frame" x="82" y="525" width="148" height="82"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Send Text"/>
+                                <connections>
+                                    <action selector="userSendsText:" destination="sjg-Cw-MaI" eventType="touchUpInside" id="ikF-wa-vSA"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="70z-My-5Pf"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j01-uS-mVi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3327" y="878"/>
+            <point key="canvasLocation" x="3325.5999999999999" y="877.51124437781118"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="r0I-ZF-u5M">
@@ -179,12 +187,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="rwn-lP-rPi">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="629"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="rwn-lP-rPi">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eNx-ur-WDN">
-                                <rect key="frame" x="161" y="637" width="53" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eNx-ur-WDN">
+                                <rect key="frame" x="161" y="667" width="53" height="30"/>
                                 <state key="normal" title="Return"/>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" id="nhN-OH-FaN"/>
@@ -194,6 +201,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="rwn-lP-rPi" firstAttribute="leading" secondItem="EFX-Xz-u8s" secondAttribute="leading" id="D6c-mb-Nec"/>
+                            <constraint firstItem="eNx-ur-WDN" firstAttribute="top" secondItem="rwn-lP-rPi" secondAttribute="bottom" id="VIF-yv-DmD"/>
                             <constraint firstItem="rwn-lP-rPi" firstAttribute="bottom" secondItem="EFX-Xz-u8s" secondAttribute="bottom" id="eEm-cg-ofL"/>
                             <constraint firstItem="rwn-lP-rPi" firstAttribute="top" secondItem="0rO-z4-aET" secondAttribute="top" id="sG7-zM-eDD"/>
                             <constraint firstItem="rwn-lP-rPi" firstAttribute="trailing" secondItem="EFX-Xz-u8s" secondAttribute="trailing" id="t46-CI-LJK"/>
@@ -378,6 +386,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="Jgd-kT-vgP"/>
         <segue reference="RH1-KD-1sA"/>
-        <segue reference="E78-QK-pqv"/>
+        <segue reference="nhN-OH-FaN"/>
     </inferredMetricsTieBreakers>
 </document>

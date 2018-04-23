@@ -14,18 +14,19 @@ class AccelerDataViewController: UIViewController {
  
     
     @IBOutlet weak var dataText: UILabel!
-    @IBOutlet weak var emergencyContactInfo: UILabel!
+    
+    @IBOutlet weak var emergencyContactInfo_: UITableView!
+    
+    
     
     var motionManager = CMMotionManager()
-    
-    
-    var emergencyContact = UILabel();
+    var emergencyContact = UITableView()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        emergencyContactInfo = emergencyContact
+        emergencyContactInfo_ = emergencyContact
         //**
 
         // Do any additional setup after loading the view.

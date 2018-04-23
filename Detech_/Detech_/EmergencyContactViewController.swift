@@ -55,16 +55,14 @@ class EmergencyContactViewController: UIViewController, UITableViewDelegate, UIT
     
     
     
-        //var emergencyContact = contacts // Potentially send the info regarding the selected user to accelerDataView ??****
-        // Potentially parse data to AccelerDataView??? *******
-
-        //performSegue(withIdentifier: "sendUserData", sender: self)
+     
+        performSegue(withIdentifier: "sendUserData", sender: self)
     }
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         var AccelerData = segue.destination as! AccelerDataViewController
-        AccelerData.emergencyContact = tableView.visibleCells 
+        AccelerData.emergencyContact = tableView
     }
     
      
