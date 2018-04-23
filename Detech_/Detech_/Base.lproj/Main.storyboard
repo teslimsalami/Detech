@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gwb-3i-8QK">
+<<<<<<< HEAD
+    <device id="retina5_5" orientation="portrait">
+=======
     <device id="retina4_7" orientation="portrait">
+>>>>>>> 6430f55203d29fc6b6d833a6b2eff2994f4205ce
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,11 +19,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="NewViewController" customModule="Detech_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2SN-un-BX7">
-                                <rect key="frame" x="103" y="637" width="152" height="30"/>
+                                <rect key="frame" x="131" y="695" width="152" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Emergency Contact"/>
                                 <connections>
@@ -31,26 +35,54 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tb7-gd-WIU">
-                                <rect key="frame" x="16" y="637" width="75" height="30"/>
+                                <rect key="frame" x="20" y="696" width="75" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Data Log"/>
                                 <connections>
                                     <segue destination="uon-99-o5o" kind="show" id="Q4K-YL-Ikp"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M78-a3-if4">
-                                <rect key="frame" x="119" y="325" width="126" height="121"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OKQ-0V-9gE">
+                                <rect key="frame" x="328" y="20" width="77" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Help Now!"/>
+                                <state key="normal" title="Logout"/>
+                                <connections>
+                                    <action selector="logoutPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LZ5-YY-Tk5"/>
+                                </connections>
                             </button>
+<<<<<<< HEAD
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="DeTech" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HPi-Ie-zm3">
+                                <rect key="frame" x="141" y="113" width="218" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="57"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Epilepsy Ribbon" translatesAutoresizingMaskIntoConstraints="NO" id="e3K-j4-EzC">
+                                <rect key="frame" x="-13" y="89" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+=======
+>>>>>>> 6430f55203d29fc6b6d833a6b2eff2994f4205ce
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wp7-r9-faB">
-                                <rect key="frame" x="258" y="637" width="101" height="30"/>
+                                <rect key="frame" x="295" y="696" width="101" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="User Location"/>
                                 <connections>
                                     <segue destination="mW5-2f-F2Q" kind="show" id="Cz4-0w-xo3"/>
                                 </connections>
                             </button>
+<<<<<<< HEAD
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="sad_cloud_dark.png" translatesAutoresizingMaskIntoConstraints="NO" id="oGc-Eo-8zZ">
+                                <rect key="frame" x="24" y="644" width="67" height="56"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="default_marker.png" translatesAutoresizingMaskIntoConstraints="NO" id="vg4-1V-XPD">
+                                <rect key="frame" x="323" y="644" width="55" height="56"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M78-a3-if4">
+                                <rect key="frame" x="42" y="333" width="330" height="191"/>
+=======
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to Detech!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HPi-Ie-zm3">
                                 <rect key="frame" x="109" y="40" width="156" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -60,18 +92,25 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OKQ-0V-9gE">
                                 <rect key="frame" x="141" y="287" width="77" height="30"/>
+>>>>>>> 6430f55203d29fc6b6d833a6b2eff2994f4205ce
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Logout"/>
-                                <connections>
-                                    <action selector="logoutPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LZ5-YY-Tk5"/>
-                                </connections>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="29"/>
+                                <state key="normal" title="Help Now!">
+                                    <color key="titleColor" red="1" green="0.18086498964688669" blue="0.140089041392643" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                             </button>
+<<<<<<< HEAD
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="Map40x40" translatesAutoresizingMaskIntoConstraints="NO" id="6Sh-GN-d5k">
+                                <rect key="frame" x="179" y="651" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask"/>
+=======
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Detech User Manual 29 pt @ 3x" translatesAutoresizingMaskIntoConstraints="NO" id="DvN-F7-BH7">
                                 <rect key="frame" x="67" y="86" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+>>>>>>> 6430f55203d29fc6b6d833a6b2eff2994f4205ce
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="uF8-3J-FZD"/>
@@ -79,18 +118,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1352.8" y="119.1904047976012"/>
+            <point key="canvasLocation" x="1352.1739130434785" y="118.20652173913044"/>
         </scene>
         <!--Emergency Contact View Controller-->
         <scene sceneID="rmx-ex-50Z">
             <objects>
                 <viewController id="9pW-qm-uwz" customClass="EmergencyContactViewController" customModule="Detech_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xar-W1-8fz">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DcR-Nf-am3">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="20" width="414" height="716"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2O1-TS-Hyo">
@@ -184,11 +223,11 @@
             <objects>
                 <viewController id="mW5-2f-F2Q" customClass="MapViewController" customModule="Detech_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0rO-z4-aET">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="rwn-lP-rPi">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eNx-ur-WDN">
                                 <rect key="frame" x="161" y="667" width="53" height="30"/>
@@ -221,29 +260,29 @@
             <objects>
                 <viewController id="7Mk-pJ-zTW" customClass="LoginViewController" customModule="Detech_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="V9N-OF-bml">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Detech" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hwt-KP-IVs">
-                                <rect key="frame" x="119" y="20" width="137" height="140"/>
+                                <rect key="frame" x="139" y="20" width="137" height="140"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="40"/>
                                 <color key="textColor" red="0.57919406890000003" green="0.1280144453" blue="0.57268613580000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Epilepsy Ribbon" translatesAutoresizingMaskIntoConstraints="NO" id="bf4-5x-2Z0">
-                                <rect key="frame" x="67" y="137" width="240" height="128"/>
+                                <rect key="frame" x="87" y="150" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="V9D-57-114">
-                                <rect key="frame" x="67" y="331" width="236" height="30"/>
+                                <rect key="frame" x="89" y="318" width="236" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cv1-Np-mxH">
-                                <rect key="frame" x="139" y="424" width="97" height="46"/>
+                                <rect key="frame" x="159" y="424" width="97" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Login">
                                     <color key="titleColor" red="0.24313725490196078" green="0.38039215686274508" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -253,8 +292,15 @@
                                     <segue destination="BYZ-38-t0r" kind="presentation" identifier="entryView" id="2Wp-N3-1Xp"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Isf-cv-oQK">
+                                <rect key="frame" x="87" y="369" width="240" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mvf-kU-Z4T">
-                                <rect key="frame" x="139" y="478" width="97" height="30"/>
+                                <rect key="frame" x="159" y="478" width="97" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Register">
                                     <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -263,13 +309,6 @@
                                     <segue destination="0qj-dZ-BkR" kind="presentation" identifier="registerView" id="6q2-zD-E9A"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Isf-cv-oQK">
-                                <rect key="frame" x="65" y="386" width="240" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="hZF-Ke-bWe"/>
@@ -290,7 +329,7 @@
             <objects>
                 <viewController id="0qj-dZ-BkR" customClass="RegisterPageViewController" customModule="Detech_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RyA-Bn-1kt">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Register" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qNf-5h-7a1">
@@ -366,7 +405,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gwb-3i-8QK" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="UDF-bN-qjm">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -380,10 +419,13 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Detech User Manual 29 pt @ 3x" width="87" height="87"/>
         <image name="Epilepsy Ribbon" width="236" height="296"/>
+        <image name="Map40x40" width="40" height="40"/>
+        <image name="default_marker.png" width="26" height="41"/>
+        <image name="sad_cloud_dark.png" width="144" height="96"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="6q2-zD-E9A"/>
         <segue reference="Jgd-kT-vgP"/>
         <segue reference="RH1-KD-1sA"/>
         <segue reference="nhN-OH-FaN"/>
