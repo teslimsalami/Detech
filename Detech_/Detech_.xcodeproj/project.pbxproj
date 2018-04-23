@@ -119,9 +119,12 @@
 				C6EC4E66206C5BAE00D02C9D /* FFTCalculator.m */,
 				C6EC4E62206C5AE300D02C9D /* AppDelegate.h */,
 				C6EC4E63206C5AE300D02C9D /* AppDelegate.m */,
+<<<<<<< HEAD
 				C69A901220864C1F0065745B /* MapViewController.swift */,
 				C69A9014208657920065745B /* EmergencyContactViewController.swift */,
 				C6626EC12086632100B93068 /* ContactStruct.swift */,
+=======
+>>>>>>> parent of 7b54127... Merge branch 'master' of https://github.com/teslimsalami/Detech
 			);
 			path = Detech_;
 			sourceTree = "<group>";
