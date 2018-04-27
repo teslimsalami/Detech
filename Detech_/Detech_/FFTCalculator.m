@@ -62,12 +62,12 @@
         [self calculateFastFourierTransformWithCompletion:^(NSArray *values, float mean, NSError *error) {
             calculationHandler(values, mean, error);
             
-            if (self->_debugEnabled) {
+            if (_debugEnabled) {
                 NSLog(@"Fourier: %p", [values componentsJoinedByString:@"\n"]);
             }
             
-            dispatch_sync(self->_queue, ^{
-                [self->_accelerometerValues removeAllObjects];
+            dispatch_sync(_queue, ^{
+                [_accelerometerValues removeAllObjects];
             });
         }];
     }

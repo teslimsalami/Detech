@@ -7,21 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3ADC598D2087C8DD00E0695F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3ADC598C2087C8DD00E0695F /* GoogleService-Info.plist */; };
 		7E3AA859483095CA29C80B5E /* Pods_Detech_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 262014AA2D6AF96E88EE32F7 /* Pods_Detech_.framework */; };
 		C60750BB204CACEF0044C7E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60750BA204CACEF0044C7E4 /* AppDelegate.swift */; };
 		C60750BD204CACEF0044C7E4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60750BC204CACEF0044C7E4 /* ViewController.swift */; };
 		C60750C0204CACEF0044C7E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C60750BE204CACEF0044C7E4 /* Main.storyboard */; };
 		C60750C2204CACEF0044C7E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C60750C1204CACEF0044C7E4 /* Assets.xcassets */; };
 		C60750C5204CACEF0044C7E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C60750C3204CACEF0044C7E4 /* LaunchScreen.storyboard */; };
-		C62AE9C0208BA137003B4D04 /* eMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62AE9BF208BA137003B4D04 /* eMessageViewController.swift */; };
 		C6626EC22086632100B93068 /* ContactStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6626EC12086632100B93068 /* ContactStruct.swift */; };
-		C68F36FA2087C3D60023023E /* AccelerDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68F36F92087C3D60023023E /* AccelerDataViewController.swift */; };
 		C69A900D208647340065745B /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69A900C208647340065745B /* NewViewController.swift */; };
 		C69A901320864C1F0065745B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69A901220864C1F0065745B /* MapViewController.swift */; };
 		C69A9015208657920065745B /* EmergencyContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69A9014208657920065745B /* EmergencyContactViewController.swift */; };
 		C6A66F572058C7F500891223 /* RegisterPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A66F562058C7F500891223 /* RegisterPageViewController.swift */; };
 		C6A66F592058D06A00891223 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A66F582058D06A00891223 /* LoginViewController.swift */; };
+		C6B35643205C487200AEFB95 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C6B35642205C487200AEFB95 /* GoogleService-Info.plist */; };
 		C6EC4E64206C5AE300D02C9D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C6EC4E63206C5AE300D02C9D /* AppDelegate.m */; };
 		C6EC4E67206C5BAE00D02C9D /* FFTCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = C6EC4E66206C5BAE00D02C9D /* FFTCalculator.m */; };
 		C6EC4E6A206C5D9900D02C9D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6EC4E69206C5D9900D02C9D /* ViewController.m */; };
@@ -33,7 +31,6 @@
 /* Begin PBXFileReference section */
 		262014AA2D6AF96E88EE32F7 /* Pods_Detech_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Detech_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C352AF7294147A9B23CE915 /* Pods-Detech_.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Detech_.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Detech_/Pods-Detech_.debug.xcconfig"; sourceTree = "<group>"; };
-		3ADC598C2087C8DD00E0695F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A937FB33A822028696F5FFFB /* Pods-Detech_.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Detech_.release.xcconfig"; path = "Pods/Target Support Files/Pods-Detech_/Pods-Detech_.release.xcconfig"; sourceTree = "<group>"; };
 		C60750B7204CACEF0044C7E4 /* Detech_.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Detech_.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C60750BA204CACEF0044C7E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -42,14 +39,13 @@
 		C60750C1204CACEF0044C7E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C60750C4204CACEF0044C7E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C60750C6204CACEF0044C7E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C62AE9BF208BA137003B4D04 /* eMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eMessageViewController.swift; sourceTree = "<group>"; };
 		C6626EC12086632100B93068 /* ContactStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactStruct.swift; sourceTree = "<group>"; };
-		C68F36F92087C3D60023023E /* AccelerDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccelerDataViewController.swift; sourceTree = "<group>"; };
 		C69A900C208647340065745B /* NewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
 		C69A901220864C1F0065745B /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		C69A9014208657920065745B /* EmergencyContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyContactViewController.swift; sourceTree = "<group>"; };
 		C6A66F562058C7F500891223 /* RegisterPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPageViewController.swift; sourceTree = "<group>"; };
 		C6A66F582058D06A00891223 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		C6B35642205C487200AEFB95 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Desktop/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C6EC4E5B206C4A9B00D02C9D /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
 		C6EC4E62206C5AE300D02C9D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C6EC4E63206C5AE300D02C9D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -106,15 +102,12 @@
 				C60750BA204CACEF0044C7E4 /* AppDelegate.swift */,
 				C69A900C208647340065745B /* NewViewController.swift */,
 				C60750BC204CACEF0044C7E4 /* ViewController.swift */,
-				C69A901220864C1F0065745B /* MapViewController.swift */,
-				C69A9014208657920065745B /* EmergencyContactViewController.swift */,
-				C6626EC12086632100B93068 /* ContactStruct.swift */,
 				C60750BE204CACEF0044C7E4 /* Main.storyboard */,
 				C60750C1204CACEF0044C7E4 /* Assets.xcassets */,
 				C60750C3204CACEF0044C7E4 /* LaunchScreen.storyboard */,
-				3ADC598C2087C8DD00E0695F /* GoogleService-Info.plist */,
 				C60750C6204CACEF0044C7E4 /* Info.plist */,
 				C6A66F562058C7F500891223 /* RegisterPageViewController.swift */,
+				C6B35642205C487200AEFB95 /* GoogleService-Info.plist */,
 				C6A66F582058D06A00891223 /* LoginViewController.swift */,
 				C6EC4E5B206C4A9B00D02C9D /* BridgingHeader.h */,
 				C6EC4E77206C650000D02C9D /* FFTLaunchScreen.storyboard */,
@@ -127,13 +120,11 @@
 				C6EC4E62206C5AE300D02C9D /* AppDelegate.h */,
 				C6EC4E63206C5AE300D02C9D /* AppDelegate.m */,
 <<<<<<< HEAD
-=======
 				C69A901220864C1F0065745B /* MapViewController.swift */,
-				C6626EC12086632100B93068 /* ContactStruct.swift */,
-				C68F36F92087C3D60023023E /* AccelerDataViewController.swift */,
-				C62AE9BF208BA137003B4D04 /* eMessageViewController.swift */,
 				C69A9014208657920065745B /* EmergencyContactViewController.swift */,
->>>>>>> 6430f55203d29fc6b6d833a6b2eff2994f4205ce
+				C6626EC12086632100B93068 /* ContactStruct.swift */,
+=======
+>>>>>>> parent of 7b54127... Merge branch 'master' of https://github.com/teslimsalami/Detech
 			);
 			path = Detech_;
 			sourceTree = "<group>";
@@ -177,7 +168,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "Teslim Salami";
 				TargetAttributes = {
 					C60750B6204CACEF0044C7E4 = {
@@ -212,10 +203,10 @@
 			files = (
 				C6EC4E78206C650000D02C9D /* FFTLaunchScreen.storyboard in Resources */,
 				C60750C5204CACEF0044C7E4 /* LaunchScreen.storyboard in Resources */,
+				C6B35643205C487200AEFB95 /* GoogleService-Info.plist in Resources */,
 				C60750C2204CACEF0044C7E4 /* Assets.xcassets in Resources */,
 				C60750C0204CACEF0044C7E4 /* Main.storyboard in Resources */,
 				C6EC4E76206C643800D02C9D /* FFTMain.storyboard in Resources */,
-				3ADC598D2087C8DD00E0695F /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,14 +284,12 @@
 				C6EC4E67206C5BAE00D02C9D /* FFTCalculator.m in Sources */,
 				C6A66F592058D06A00891223 /* LoginViewController.swift in Sources */,
 				C69A901320864C1F0065745B /* MapViewController.swift in Sources */,
-				C62AE9C0208BA137003B4D04 /* eMessageViewController.swift in Sources */,
 				C6EC4E64206C5AE300D02C9D /* AppDelegate.m in Sources */,
 				C69A9015208657920065745B /* EmergencyContactViewController.swift in Sources */,
 				C60750BD204CACEF0044C7E4 /* ViewController.swift in Sources */,
 				C6626EC22086632100B93068 /* ContactStruct.swift in Sources */,
 				C60750BB204CACEF0044C7E4 /* AppDelegate.swift in Sources */,
 				C6EC4E71206C632900D02C9D /* main_.m in Sources */,
-				C68F36FA2087C3D60023023E /* AccelerDataViewController.swift in Sources */,
 				C69A900D208647340065745B /* NewViewController.swift in Sources */,
 				C6A66F572058C7F500891223 /* RegisterPageViewController.swift in Sources */,
 			);
@@ -342,7 +331,6 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -350,7 +338,6 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -401,7 +388,6 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -409,7 +395,6 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -445,15 +430,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GL8LMC474B;
+				DEVELOPMENT_TEAM = 2CWH7XW8FU;
 				INFOPLIST_FILE = Detech_/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.teslimsalami.Detech-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = Detech_/BridgingHeader.h;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
@@ -467,15 +449,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GL8LMC474B;
+				DEVELOPMENT_TEAM = 2CWH7XW8FU;
 				INFOPLIST_FILE = Detech_/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.teslimsalami.Detech-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = Detech_/BridgingHeader.h;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
